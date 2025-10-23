@@ -9,10 +9,11 @@ export const unstable_settings = {
   anchor: '(tabs)',
 };
 
-export default function RootLayout() {
+const RootLayout = () =>{
   const colorScheme = useColorScheme();
 
   return (
+    
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -21,4 +22,8 @@ export default function RootLayout() {
       <StatusBar style="auto" />
     </ThemeProvider>
   );
+  
 }
+
+export default RootLayout;
+
